@@ -1,4 +1,4 @@
-# Travel.io — AI-Powered Travel Planning App
+# TravelMitra.io — AI-Powered Travel Planning App
 
 A modern, fully responsive travel planning landing page built with **React + TypeScript + Sass + Vite**. Features an AI chat preview, dark/light theme toggle, Login and Sign Up pages, and stunning section-wise Unsplash background images.
 
@@ -32,7 +32,7 @@ A modern, fully responsive travel planning landing page built with **React + Typ
 ## Project Structure
 
 ```
-travel-io/
+travelMitra-io/
 ├── public/
 ├── src/
 │   ├── components/
