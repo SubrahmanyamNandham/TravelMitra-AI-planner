@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #030712;
+  color: #f3f4f6;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2563eb;
+}
+
+/* Selection */
+::selection {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+/* Global animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Glassmorphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 1rem;
+}
+
+.glass-hover {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 1rem;
+
+  transition: all 0.3s ease;
+}
+
+.glass-hover:hover {
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+}
+/* Gradient text */
+.gradient-text {
+  @apply bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent;
+}
+
+/* Button variations */
+.btn-primary {
+  @apply bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 active:scale-95;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 30px rgba(59,130,246,0.5);
+}
+
+.btn-secondary {
+  @apply bg-white/10 text-white border border-white/20 px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:bg-white/20 active:scale-95;
+}
+
+.btn-ghost {
+  @apply text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:bg-white/10 active:scale-95;
+}
+
+/* Card base */
+.card-base {
+  @apply bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-6 transition-all duration-300;
+}
+
+.card-hover {
+  @apply card-base;
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  border-color: rgba(59,130,246,0.5);
+  box-shadow: 0 10px 30px rgba(59,130,246,0.2);
+  transform: translateY(-4px);
+}

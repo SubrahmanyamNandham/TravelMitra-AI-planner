@@ -1,0 +1,92 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.features {
+  background: linear-gradient(to bottom, $bg, $bg2, $bg);
+}
+
+.badge {
+  @include section-badge($blue-light, rgba(59, 130, 246, 0.1), rgba(59, 130, 246, 0.3));
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  position: relative;
+  border-radius: 20px;
+  padding: 32px;
+  border: 1px solid $border;
+  transition: $transition;
+  overflow: hidden;
+  background: $glass2;
+  @include card-hover-glow;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -80px;
+    right: -80px;
+    width: 160px;
+    height: 160px;
+    background: $grad;
+    border-radius: 50%;
+    opacity: 0;
+    transition: 0.4s;
+  }
+
+  &:hover {
+    transform: translateY(-8px);
+    border-color: rgba(59, 130, 246, 0.4);
+
+    &::after { opacity: 0.04; }
+
+    .card__icon { transform: scale(1.1) rotate(8deg); }
+    .card__title { color: $blue-light; }
+  }
+
+  &__icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(147, 51, 234, 0.2));
+    @include flex-center;
+    font-size: 28px;
+    margin-bottom: 24px;
+    transition: $transition;
+  }
+
+  &__title {
+    font-family: $ff-head;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    transition: 0.3s;
+  }
+
+  &__desc {
+    color: $text2;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: $blue-light;
+    font-size: 14px;
+    font-weight: 600;
+
+    span { animation: arrow-pulse 2s ease-in-out infinite; }
+  }
+}
+
+.cta {
+  text-align: center;
+  margin-top: 48px;
+}

@@ -1,0 +1,168 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 140px 24px 80px;
+  overflow: hidden;
+
+  @include responsive(tablet) { padding: 120px 20px 60px; }
+}
+
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: 50px;
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  font-size: 13px;
+  color: $blue-light;
+  font-weight: 500;
+  margin-bottom: 32px;
+
+  &__dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: $blue;
+    animation: pulse-dot 2s infinite;
+  }
+}
+
+.headline {
+  font-family: $ff-head;
+  font-size: clamp(44px, 7vw, 82px);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -1.5px;
+  margin-bottom: 24px;
+
+  @include responsive(mobile) { font-size: 38px; letter-spacing: -1px; }
+}
+
+.sub {
+  font-size: clamp(16px, 2vw, 20px);
+  color: $text2;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  line-height: 1.7;
+}
+
+.checks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px 36px;
+  margin-bottom: 48px;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: $text2;
+
+  svg { color: $green; flex-shrink: 0; }
+}
+
+// Search form
+.form {
+  @include glass;
+  border-radius: $radius2;
+  padding: 28px;
+  margin-bottom: 60px;
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.4);
+
+  @include responsive(tablet) { padding: 20px; }
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+
+  @include responsive(mobile) { grid-template-columns: 1fr; }
+}
+
+.form-group {
+  label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: $text2;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin-bottom: 8px;
+  }
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  @include responsive(mobile) { flex-direction: column; }
+
+  .btn-primary,
+  .btn-secondary {
+    flex: 1;
+    min-width: 140px;
+
+    @include responsive(mobile) { flex: unset; width: 100%; }
+  }
+}
+
+// Stats
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 16px;
+
+  @include responsive(mobile) { grid-template-columns: 1fr 1fr; }
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid $border;
+  border-radius: 16px;
+  padding: 20px 16px;
+  text-align: center;
+  transition: $transition;
+  cursor: default;
+
+  &:hover {
+    transform: translateY(-6px);
+    border-color: rgba(59, 130, 246, 0.4);
+    background: rgba(59, 130, 246, 0.05);
+  }
+
+  &__number {
+    font-family: $ff-head;
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 800;
+    @include grad-text;
+    margin-bottom: 6px;
+  }
+
+  &__label {
+    font-size: 12px;
+    color: $text2;
+  }
+}
