@@ -1,0 +1,42 @@
+# Environment files
+.env
+.env.*
+
+# Dependencies
+node_modules/
+
+# Build artifacts
+dist/
+coverage/
+
+# SQLite / local data
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Temporary files
+.tmp/
+.tmp-*
+*.tmp
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local runtime artifacts
+dev.sqlite3
+src/scripts/dev.sqlite3
+
+# Docs and config files that should not be committed
+END_TO_END_DOCUMENTATION.md
+
