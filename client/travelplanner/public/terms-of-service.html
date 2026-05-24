@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service — Travel Mitra</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1a2e;
+    --gold: #c9933a;
+    --gold-light: #f0d9a8;
+    --cream: #faf7f2;
+    --warm-white: #fffef9;
+    --muted: #7a7060;
+    --border: #e8dfc8;
+    --accent: #2d5a6e;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--ink); font-size: 16px; line-height: 1.8; }
+  header { background: var(--ink); position: sticky; top: 0; z-index: 100; border-bottom: 2px solid var(--gold); }
+  .header-inner { max-width: 1100px; margin: 0 auto; padding: 18px 40px; display: flex; align-items: center; justify-content: space-between; }
+  .logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--warm-white); text-decoration: none; }
+  .logo span { color: var(--gold); }
+  nav { display: flex; gap: 28px; }
+  nav a { color: #b8b0a0; text-decoration: none; font-size: 0.82rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s; }
+  nav a:hover, nav a.active { color: var(--gold); }
+  .hero-band { background: linear-gradient(135deg, var(--accent) 0%, #1a3a4a 100%); padding: 64px 40px 56px; text-align: center; position: relative; overflow: hidden; }
+  .hero-band::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9933a' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+  .hero-band .doc-type { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-weight: 500; margin-bottom: 14px; position: relative; }
+  .hero-band h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3rem); color: var(--warm-white); font-weight: 700; position: relative; margin-bottom: 16px; }
+  .hero-band p { color: #b8c8d0; font-size: 0.95rem; position: relative; }
+  .page-wrap { max-width: 1100px; margin: 0 auto; padding: 60px 40px; display: grid; grid-template-columns: 240px 1fr; gap: 60px; align-items: start; }
+  .toc { position: sticky; top: 72px; background: var(--warm-white); border: 1px solid var(--border); border-top: 3px solid var(--gold); border-radius: 2px; padding: 28px 24px; }
+  .toc-title { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+  .toc ol { list-style: none; counter-reset: toc; }
+  .toc ol li { counter-increment: toc; margin-bottom: 10px; display: flex; gap: 8px; align-items: baseline; }
+  .toc ol li::before { content: counter(toc, decimal-leading-zero); font-size: 0.7rem; color: var(--gold); font-weight: 600; min-width: 20px; flex-shrink: 0; }
+  .toc ol li a { color: var(--muted); text-decoration: none; font-size: 0.83rem; line-height: 1.4; transition: color 0.2s; }
+  .toc ol li a:hover { color: var(--gold); }
+  .content section { margin-bottom: 52px; padding-bottom: 52px; border-bottom: 1px solid var(--border); animation: fadeUp 0.5s ease both; }
+  .content section:last-child { border-bottom: none; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+  .section-header { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
+  .section-num { width: 36px; height: 36px; background: var(--gold); color: var(--ink); font-size: 0.75rem; font-weight: 700; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  h2 { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 600; color: var(--ink); line-height: 1.3; }
+  h3 { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--accent); margin: 24px 0 10px; }
+  p { color: #3d3830; margin-bottom: 14px; font-weight: 300; }
+  ul, ol.list { padding-left: 0; margin-bottom: 14px; list-style: none; }
+  ul li, ol.list li { color: #3d3830; font-weight: 300; padding: 5px 0 5px 22px; position: relative; line-height: 1.7; }
+  ul li::before { content: '→'; color: var(--gold); position: absolute; left: 0; font-size: 0.85em; }
+  ol.list { counter-reset: item; }
+  ol.list li { counter-increment: item; }
+  ol.list li::before { content: counter(item) '.'; color: var(--gold); position: absolute; left: 0; font-size: 0.85em; font-weight: 600; }
+  .highlight-box { background: linear-gradient(135deg, #fff9ee, var(--cream)); border-left: 3px solid var(--gold); padding: 18px 22px; border-radius: 0 4px 4px 0; margin: 20px 0; }
+  .highlight-box p { margin: 0; font-size: 0.9rem; color: var(--muted); }
+  .warn-box { background: #fff5f0; border-left: 3px solid #c0392b; padding: 18px 22px; border-radius: 0 4px 4px 0; margin: 20px 0; }
+  .warn-box p { margin: 0; font-size: 0.88rem; color: #7a2a20; font-weight: 400; }
+  strong { color: var(--ink); font-weight: 500; }
+  a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+  footer { background: var(--ink); border-top: 2px solid var(--gold); padding: 36px 40px; text-align: center; }
+  footer .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--warm-white); margin-bottom: 10px; }
+  footer .footer-logo span { color: var(--gold); }
+  footer p { color: #706860; font-size: 0.82rem; margin: 0; }
+  .footer-links { display: flex; justify-content: center; gap: 24px; margin: 14px 0; }
+  .footer-links a { color: #908880; font-size: 0.8rem; text-decoration: none; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--gold); }
+  @media (max-width: 768px) { .page-wrap { grid-template-columns: 1fr; } .toc { position: static; } .header-inner { padding: 16px 20px; } nav { display: none; } .page-wrap { padding: 40px 20px; } .hero-band { padding: 44px 20px 36px; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="#" class="logo">Travel <span>Mitra</span></a>
+    <nav>
+      <a href="privacy-policy.html">Privacy</a>
+      <a href="terms-of-service.html" class="active">Terms</a>
+      <a href="cookie-policy.html">Cookies</a>
+      <a href="license.html">License</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero-band">
+  <div class="doc-type">Legal Document</div>
+  <h1>Terms of Service</h1>
+  <p>Effective Date: May 24, 2026 &nbsp;·&nbsp; Travel Mitra.io</p>
+</div>
+
+<div class="page-wrap">
+  <aside class="toc">
+    <div class="toc-title">Contents</div>
+    <ol>
+      <li><a href="#s1">Acceptance of Terms</a></li>
+      <li><a href="#s2">Use of Our Services</a></li>
+      <li><a href="#s3">Account Registration</a></li>
+      <li><a href="#s4">Bookings & Payments</a></li>
+      <li><a href="#s5">Cancellations & Refunds</a></li>
+      <li><a href="#s6">User Content</a></li>
+      <li><a href="#s7">Prohibited Conduct</a></li>
+      <li><a href="#s8">Intellectual Property</a></li>
+      <li><a href="#s9">Disclaimers</a></li>
+      <li><a href="#s10">Limitation of Liability</a></li>
+      <li><a href="#s11">Indemnification</a></li>
+      <li><a href="#s12">Governing Law</a></li>
+      <li><a href="#s13">Changes to Terms</a></li>
+      <li><a href="#s14">Contact Us</a></li>
+    </ol>
+  </aside>
+
+  <main class="content">
+
+    <div class="highlight-box">
+      <p>Please read these Terms of Service carefully before using Travel Mitra. By accessing or using our platform, you agree to be bound by these terms. If you do not agree, please do not use our services.</p>
+    </div>
+
+    <section id="s1">
+      <div class="section-header"><div class="section-num">01</div><h2>Acceptance of Terms</h2></div>
+      <p>These Terms of Service ("Terms") constitute a legally binding agreement between you ("User", "you", "your") and Travel Mitra Technologies Pvt. Ltd. ("Travel Mitra", "we", "us", "our"), governing your access to and use of the Travel Mitra website, mobile applications, and all related services (collectively, the "Platform").</p>
+      <p>By creating an account, making a booking, or otherwise using our Platform, you confirm that you are at least 18 years old, have the legal capacity to enter into this agreement, and accept these Terms in full.</p>
+    </section>
+
+    <section id="s2">
+      <div class="section-header"><div class="section-num">02</div><h2>Use of Our Services</h2></div>
+      <p>Travel Mitra provides a platform for discovering, planning, and booking travel experiences including accommodations, transportation, tours, and related services. Our role is that of an intermediary — we connect travellers with third-party service providers ("Travel Partners").</p>
+      <ul>
+        <li>You may use the Platform only for lawful personal or business travel planning purposes.</li>
+        <li>You are responsible for ensuring that all travel bookings comply with the laws of your origin and destination countries.</li>
+        <li>You must ensure that any co-travellers are aware of and agree to applicable terms.</li>
+      </ul>
+    </section>
+
+    <section id="s3">
+      <div class="section-header"><div class="section-num">03</div><h2>Account Registration</h2></div>
+      <p>To access certain features, you must register for a Travel Mitra account. You agree to:</p>
+      <ul>
+        <li>Provide accurate, complete, and up-to-date registration information.</li>
+        <li>Maintain the confidentiality of your account credentials.</li>
+        <li>Notify us immediately of any unauthorised use of your account.</li>
+        <li>Accept responsibility for all activities that occur under your account.</li>
+      </ul>
+      <p>We reserve the right to suspend or terminate accounts that violate these Terms or engage in fraudulent activity.</p>
+    </section>
+
+    <section id="s4">
+      <div class="section-header"><div class="section-num">04</div><h2>Bookings &amp; Payments</h2></div>
+      <h3>Booking Confirmation</h3>
+      <p>A booking is confirmed only upon receipt of a confirmation email or notification from Travel Mitra. Prices displayed are in Indian Rupees (INR) unless stated otherwise, and are subject to availability at the time of booking.</p>
+      <h3>Payment</h3>
+      <ul>
+        <li>All payments are processed securely through authorised payment gateways.</li>
+        <li>You authorise Travel Mitra to charge your provided payment method for the total booking amount.</li>
+        <li>Prices include applicable taxes unless explicitly stated as exclusive.</li>
+        <li>Travel Mitra is not responsible for additional bank charges, conversion fees, or international transaction fees.</li>
+      </ul>
+      <h3>Pricing Errors</h3>
+      <p>In the event of a pricing error, we reserve the right to cancel the affected booking and issue a full refund. We will notify you promptly in such cases.</p>
+    </section>
+
+    <section id="s5">
+      <div class="section-header"><div class="section-num">05</div><h2>Cancellations &amp; Refunds</h2></div>
+      <p>Cancellation and refund policies vary by Travel Partner and booking type. The specific policy applicable to your booking will be displayed at the time of purchase.</p>
+      <ul>
+        <li>Some bookings are non-refundable once confirmed.</li>
+        <li>Refunds, where applicable, are processed within 7–14 business days to your original payment method.</li>
+        <li>Travel Mitra service fees may be non-refundable even if the underlying booking is cancelled.</li>
+        <li>In cases of force majeure (natural disasters, government travel bans, pandemics), separate policies may apply.</li>
+      </ul>
+      <div class="warn-box">
+        <p>We strongly recommend purchasing travel insurance for all bookings to protect against unexpected cancellations, medical emergencies, and travel disruptions.</p>
+      </div>
+    </section>
+
+    <section id="s6">
+      <div class="section-header"><div class="section-num">06</div><h2>User Content</h2></div>
+      <p>You may submit reviews, photos, comments, and other content ("User Content") to the Platform. By submitting User Content, you grant Travel Mitra a non-exclusive, worldwide, royalty-free licence to use, display, reproduce, and distribute such content in connection with our services.</p>
+      <p>You represent that your User Content does not infringe any third-party rights, is accurate, and does not contain offensive, defamatory, or illegal material. We reserve the right to remove User Content that violates these standards.</p>
+    </section>
+
+    <section id="s7">
+      <div class="section-header"><div class="section-num">07</div><h2>Prohibited Conduct</h2></div>
+      <p>You agree not to engage in any of the following:</p>
+      <ul>
+        <li>Using the Platform for any fraudulent, illegal, or unauthorised purpose.</li>
+        <li>Making fictitious or speculative bookings without genuine travel intent.</li>
+        <li>Attempting to reverse-engineer, hack, or otherwise compromise the Platform's security.</li>
+        <li>Scraping, crawling, or automated extraction of data without our written consent.</li>
+        <li>Posting false reviews, spam, or misleading information.</li>
+        <li>Harassing, threatening, or abusing other users or Travel Mitra staff.</li>
+        <li>Impersonating any person or entity.</li>
+        <li>Violating any applicable local, national, or international laws.</li>
+      </ul>
+    </section>
+
+    <section id="s8">
+      <div class="section-header"><div class="section-num">08</div><h2>Intellectual Property</h2></div>
+      <p>All content on the Travel Mitra Platform — including the name, logo, design, text, graphics, software, and underlying code — is the exclusive property of Travel Mitra Technologies Pvt. Ltd. or its licensors, protected by applicable intellectual property laws.</p>
+      <p>You may not copy, reproduce, distribute, or create derivative works from any Platform content without our prior written consent. Personal, non-commercial use of the Platform for travel planning is permitted.</p>
+    </section>
+
+    <section id="s9">
+      <div class="section-header"><div class="section-num">09</div><h2>Disclaimers</h2></div>
+      <p>Travel Mitra acts as an intermediary and does not own or operate the accommodations, airlines, or tour services listed. We are not responsible for:</p>
+      <ul>
+        <li>The quality, safety, or accuracy of services provided by Travel Partners.</li>
+        <li>Changes, cancellations, or disruptions initiated by Travel Partners.</li>
+        <li>Inaccuracies in Travel Partner listings or descriptions.</li>
+        <li>Loss, damage, injury, or inconvenience arising from travel arrangements.</li>
+      </ul>
+      <p>The Platform and its content are provided "as is" without warranties of any kind, express or implied, to the fullest extent permitted by law.</p>
+    </section>
+
+    <section id="s10">
+      <div class="section-header"><div class="section-num">10</div><h2>Limitation of Liability</h2></div>
+      <p>To the maximum extent permitted by applicable law, Travel Mitra's total liability to you for any claims arising out of or relating to these Terms or the Platform shall not exceed the amount paid by you for the specific booking giving rise to the claim in the 12 months preceding the claim.</p>
+      <p>Travel Mitra shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of profits, data, or goodwill.</p>
+    </section>
+
+    <section id="s11">
+      <div class="section-header"><div class="section-num">11</div><h2>Indemnification</h2></div>
+      <p>You agree to indemnify and hold harmless Travel Mitra, its directors, officers, employees, and agents from any claims, damages, losses, liabilities, and expenses (including legal fees) arising from your use of the Platform, violation of these Terms, or infringement of any third-party rights.</p>
+    </section>
+
+    <section id="s12">
+      <div class="section-header"><div class="section-num">12</div><h2>Governing Law &amp; Dispute Resolution</h2></div>
+      <p>These Terms are governed by the laws of India. Any disputes arising out of or relating to these Terms shall be subject to the exclusive jurisdiction of courts in Hyderabad, Telangana, India.</p>
+      <p>We encourage you to contact us first to resolve any disputes informally. For unresolved disputes, parties agree to attempt mediation before initiating formal legal proceedings.</p>
+    </section>
+
+    <section id="s13">
+      <div class="section-header"><div class="section-num">13</div><h2>Changes to Terms</h2></div>
+      <p>We reserve the right to modify these Terms at any time. We will notify you of material changes via email or a prominent notice on the Platform at least 14 days before they take effect. Your continued use of the Platform after the effective date constitutes acceptance of the revised Terms.</p>
+    </section>
+
+    <section id="s14">
+      <div class="section-header"><div class="section-num">14</div><h2>Contact Us</h2></div>
+      <p>For questions about these Terms, please contact:</p>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:legal@travelmitra.io">legal@travelmitra.io</a></li>
+        <li><strong>Website:</strong> <a href="https://travelmitra.io">travelmitra.io</a></li>
+        <li><strong>Registered Address:</strong> Travel Mitra Technologies Pvt. Ltd., India</li>
+      </ul>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  <div class="footer-logo">Travel <span>Mitra</span></div>
+  <div class="footer-links">
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="terms-of-service.html">Terms of Service</a>
+    <a href="cookie-policy.html">Cookie Policy</a>
+    <a href="license.html">License</a>
+  </div>
+  <p>&copy; 2026 Travel Mitra Technologies Pvt. Ltd. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

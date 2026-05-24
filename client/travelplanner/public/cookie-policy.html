@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cookie Policy — Travel Mitra</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root { --ink: #1a1a2e; --gold: #c9933a; --cream: #faf7f2; --warm-white: #fffef9; --muted: #7a7060; --border: #e8dfc8; --accent: #2d5a6e; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--ink); font-size: 16px; line-height: 1.8; }
+  header { background: var(--ink); position: sticky; top: 0; z-index: 100; border-bottom: 2px solid var(--gold); }
+  .header-inner { max-width: 1100px; margin: 0 auto; padding: 18px 40px; display: flex; align-items: center; justify-content: space-between; }
+  .logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--warm-white); text-decoration: none; }
+  .logo span { color: var(--gold); }
+  nav { display: flex; gap: 28px; }
+  nav a { color: #b8b0a0; text-decoration: none; font-size: 0.82rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s; }
+  nav a:hover, nav a.active { color: var(--gold); }
+  .hero-band { background: linear-gradient(135deg, #3a2200 0%, #7a4a10 100%); padding: 64px 40px 56px; text-align: center; position: relative; overflow: hidden; }
+  .hero-band::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9933a' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+  .hero-band .doc-type { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-weight: 500; margin-bottom: 14px; position: relative; }
+  .hero-band h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3rem); color: var(--warm-white); font-weight: 700; position: relative; margin-bottom: 16px; }
+  .hero-band p { color: #d4b880; font-size: 0.95rem; position: relative; }
+  .page-wrap { max-width: 1100px; margin: 0 auto; padding: 60px 40px; display: grid; grid-template-columns: 240px 1fr; gap: 60px; align-items: start; }
+  .toc { position: sticky; top: 72px; background: var(--warm-white); border: 1px solid var(--border); border-top: 3px solid var(--gold); border-radius: 2px; padding: 28px 24px; }
+  .toc-title { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+  .toc ol { list-style: none; counter-reset: toc; }
+  .toc ol li { counter-increment: toc; margin-bottom: 10px; display: flex; gap: 8px; align-items: baseline; }
+  .toc ol li::before { content: counter(toc, decimal-leading-zero); font-size: 0.7rem; color: var(--gold); font-weight: 600; min-width: 20px; flex-shrink: 0; }
+  .toc ol li a { color: var(--muted); text-decoration: none; font-size: 0.83rem; line-height: 1.4; transition: color 0.2s; }
+  .toc ol li a:hover { color: var(--gold); }
+  .content section { margin-bottom: 52px; padding-bottom: 52px; border-bottom: 1px solid var(--border); animation: fadeUp 0.5s ease both; }
+  .content section:last-child { border-bottom: none; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+  .section-header { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
+  .section-num { width: 36px; height: 36px; background: var(--gold); color: var(--ink); font-size: 0.75rem; font-weight: 700; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  h2 { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 600; color: var(--ink); line-height: 1.3; }
+  h3 { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--accent); margin: 24px 0 10px; }
+  p { color: #3d3830; margin-bottom: 14px; font-weight: 300; }
+  ul { padding-left: 0; margin-bottom: 14px; list-style: none; }
+  ul li { color: #3d3830; font-weight: 300; padding: 5px 0 5px 22px; position: relative; line-height: 1.7; }
+  ul li::before { content: '→'; color: var(--gold); position: absolute; left: 0; font-size: 0.85em; }
+  .highlight-box { background: linear-gradient(135deg, #fff9ee, var(--cream)); border-left: 3px solid var(--gold); padding: 18px 22px; border-radius: 0 4px 4px 0; margin: 20px 0; }
+  .highlight-box p { margin: 0; font-size: 0.9rem; color: var(--muted); }
+  strong { color: var(--ink); font-weight: 500; }
+  a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+
+  /* Cookie type cards */
+  .cookie-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 24px 0; }
+  .cookie-card { background: var(--warm-white); border: 1px solid var(--border); border-radius: 4px; padding: 22px; transition: box-shadow 0.2s; }
+  .cookie-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.07); }
+  .cookie-card .badge { display: inline-block; font-size: 0.65rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; margin-bottom: 12px; }
+  .badge-required { background: #e8f4e8; color: #2a6a2a; }
+  .badge-optional { background: #fef0e0; color: #8a4a00; }
+  .cookie-card h4 { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--ink); margin-bottom: 8px; }
+  .cookie-card p { font-size: 0.87rem; margin: 0; color: var(--muted); }
+
+  footer { background: var(--ink); border-top: 2px solid var(--gold); padding: 36px 40px; text-align: center; }
+  footer .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--warm-white); margin-bottom: 10px; }
+  footer .footer-logo span { color: var(--gold); }
+  footer p { color: #706860; font-size: 0.82rem; margin: 0; }
+  .footer-links { display: flex; justify-content: center; gap: 24px; margin: 14px 0; }
+  .footer-links a { color: #908880; font-size: 0.8rem; text-decoration: none; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--gold); }
+  @media (max-width: 768px) { .page-wrap { grid-template-columns: 1fr; } .toc { position: static; } .header-inner { padding: 16px 20px; } nav { display: none; } .page-wrap { padding: 40px 20px; } .hero-band { padding: 44px 20px 36px; } .cookie-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="#" class="logo">Travel <span>Mitra</span></a>
+    <nav>
+      <a href="privacy-policy.html">Privacy</a>
+      <a href="terms-of-service.html">Terms</a>
+      <a href="cookie-policy.html" class="active">Cookies</a>
+      <a href="license.html">License</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero-band">
+  <div class="doc-type">Legal Document</div>
+  <h1>Cookie Policy</h1>
+  <p>Effective Date: May 24, 2026 &nbsp;·&nbsp; Travel Mitra.io</p>
+</div>
+
+<div class="page-wrap">
+  <aside class="toc">
+    <div class="toc-title">Contents</div>
+    <ol>
+      <li><a href="#s1">What Are Cookies?</a></li>
+      <li><a href="#s2">Types of Cookies We Use</a></li>
+      <li><a href="#s3">Essential Cookies</a></li>
+      <li><a href="#s4">Performance Cookies</a></li>
+      <li><a href="#s5">Functional Cookies</a></li>
+      <li><a href="#s6">Marketing Cookies</a></li>
+      <li><a href="#s7">Third-Party Cookies</a></li>
+      <li><a href="#s8">Managing Cookies</a></li>
+      <li><a href="#s9">Changes to Policy</a></li>
+      <li><a href="#s10">Contact Us</a></li>
+    </ol>
+  </aside>
+
+  <main class="content">
+
+    <div class="highlight-box">
+      <p>This Cookie Policy explains how Travel Mitra uses cookies and similar tracking technologies when you visit our website or use our mobile applications. It should be read alongside our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+    </div>
+
+    <section id="s1">
+      <div class="section-header"><div class="section-num">01</div><h2>What Are Cookies?</h2></div>
+      <p>Cookies are small text files stored on your device (computer, tablet, or mobile phone) when you visit a website. They are widely used to make websites work efficiently, improve user experience, and provide information to the website owner.</p>
+      <p>In addition to cookies, we may use similar technologies such as:</p>
+      <ul>
+        <li><strong>Web beacons:</strong> Tiny transparent images embedded in pages or emails that signal when content has been viewed.</li>
+        <li><strong>Local storage:</strong> Data stored in your browser to remember preferences between sessions.</li>
+        <li><strong>Session storage:</strong> Temporary data stored for the duration of a single browsing session.</li>
+        <li><strong>Pixel tags:</strong> Used to understand user interaction with our marketing communications.</li>
+      </ul>
+    </section>
+
+    <section id="s2">
+      <div class="section-header"><div class="section-num">02</div><h2>Types of Cookies We Use</h2></div>
+      <p>We use four categories of cookies on Travel Mitra, each serving a distinct purpose:</p>
+      <div class="cookie-grid">
+        <div class="cookie-card">
+          <span class="badge badge-required">Always Active</span>
+          <h4>Essential Cookies</h4>
+          <p>Required for the platform to function. Cannot be disabled without breaking core features like login and booking.</p>
+        </div>
+        <div class="cookie-card">
+          <span class="badge badge-optional">Optional</span>
+          <h4>Performance Cookies</h4>
+          <p>Help us understand how visitors interact with our site by collecting anonymous usage statistics.</p>
+        </div>
+        <div class="cookie-card">
+          <span class="badge badge-optional">Optional</span>
+          <h4>Functional Cookies</h4>
+          <p>Remember your preferences and settings to provide a personalised, more convenient experience.</p>
+        </div>
+        <div class="cookie-card">
+          <span class="badge badge-optional">Optional</span>
+          <h4>Marketing Cookies</h4>
+          <p>Used to deliver relevant travel ads and measure the effectiveness of our marketing campaigns.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="s3">
+      <div class="section-header"><div class="section-num">03</div><h2>Essential Cookies</h2></div>
+      <p>These cookies are strictly necessary for the Travel Mitra platform to operate. Without them, core features would not function correctly. You cannot opt out of essential cookies.</p>
+      <ul>
+        <li><strong>Session management:</strong> Keeps you logged in as you navigate between pages.</li>
+        <li><strong>Security tokens:</strong> Protect against cross-site request forgery (CSRF) attacks.</li>
+        <li><strong>Shopping cart / booking state:</strong> Preserves your itinerary and booking progress.</li>
+        <li><strong>Load balancing:</strong> Ensures requests are distributed efficiently across our servers.</li>
+        <li><strong>Cookie consent:</strong> Remembers your cookie preferences.</li>
+      </ul>
+      <p><strong>Duration:</strong> Session (deleted when browser closes) or up to 1 year.</p>
+    </section>
+
+    <section id="s4">
+      <div class="section-header"><div class="section-num">04</div><h2>Performance &amp; Analytics Cookies</h2></div>
+      <p>These cookies collect anonymous information about how visitors use Travel Mitra — which pages are visited most, how users navigate, and whether any errors occur. This data helps us improve our platform.</p>
+      <ul>
+        <li><strong>Google Analytics:</strong> Page views, session duration, and user flow analysis.</li>
+        <li><strong>Hotjar:</strong> Heatmaps and session recordings to understand user behaviour.</li>
+        <li><strong>Internal analytics:</strong> Search query patterns and feature usage metrics.</li>
+      </ul>
+      <p>All analytics data is aggregated and anonymised. No personally identifiable information is stored in these cookies.</p>
+      <p><strong>Duration:</strong> Up to 2 years.</p>
+    </section>
+
+    <section id="s5">
+      <div class="section-header"><div class="section-num">05</div><h2>Functional Cookies</h2></div>
+      <p>Functional cookies allow our platform to remember your preferences and tailor your experience accordingly:</p>
+      <ul>
+        <li>Your preferred language and currency settings.</li>
+        <li>Your home city or departure airport for faster search.</li>
+        <li>Recently viewed destinations and hotels.</li>
+        <li>Accessibility preferences such as font size or contrast settings.</li>
+        <li>Whether you have dismissed certain banners or notifications.</li>
+      </ul>
+      <p>Disabling these cookies may mean that certain personalisation features will not work as expected.</p>
+      <p><strong>Duration:</strong> Up to 1 year.</p>
+    </section>
+
+    <section id="s6">
+      <div class="section-header"><div class="section-num">06</div><h2>Marketing &amp; Advertising Cookies</h2></div>
+      <p>We use marketing cookies to show you relevant travel advertisements on Travel Mitra and partner websites. These cookies track your browsing activity to build a profile of your travel interests.</p>
+      <ul>
+        <li><strong>Retargeting:</strong> Show you ads for destinations or hotels you previously viewed.</li>
+        <li><strong>Attribution:</strong> Measure which marketing channels drive bookings.</li>
+        <li><strong>Social media pixels:</strong> Meta Pixel and Google Ads tags for campaign optimisation.</li>
+      </ul>
+      <p>You can opt out of marketing cookies at any time via our cookie consent banner without affecting your ability to use the platform.</p>
+      <p><strong>Duration:</strong> Up to 1 year.</p>
+    </section>
+
+    <section id="s7">
+      <div class="section-header"><div class="section-num">07</div><h2>Third-Party Cookies</h2></div>
+      <p>Some cookies are placed by third-party services that appear on our pages. We do not control these cookies. Third parties that may set cookies include:</p>
+      <ul>
+        <li><strong>Google:</strong> Analytics and advertising services.</li>
+        <li><strong>Meta (Facebook):</strong> Social sharing and advertising.</li>
+        <li><strong>Razorpay / PayU:</strong> Payment processing.</li>
+        <li><strong>Intercom:</strong> Customer support chat widget.</li>
+        <li><strong>YouTube:</strong> Embedded travel video content.</li>
+      </ul>
+      <p>Please review the respective privacy policies of these providers for information about their cookie practices.</p>
+    </section>
+
+    <section id="s8">
+      <div class="section-header"><div class="section-num">08</div><h2>Managing Your Cookie Preferences</h2></div>
+      <h3>Cookie Consent Banner</h3>
+      <p>When you first visit Travel Mitra, you will be presented with a cookie consent banner that allows you to accept all cookies, reject optional cookies, or customise your preferences by category.</p>
+      <h3>Browser Settings</h3>
+      <p>You can also manage cookies through your browser settings. Most browsers allow you to:</p>
+      <ul>
+        <li>View and delete stored cookies.</li>
+        <li>Block third-party cookies.</li>
+        <li>Receive a notification before a cookie is stored.</li>
+        <li>Block all cookies (note: this will impact platform functionality).</li>
+      </ul>
+      <p>Refer to your browser's help documentation for instructions: <a href="https://support.google.com/chrome/answer/95647" target="_blank">Chrome</a>, <a href="https://support.mozilla.org/en-US/kb/cookies-information-websites-store-on-your-computer" target="_blank">Firefox</a>, <a href="https://support.apple.com/en-us/HT201265" target="_blank">Safari</a>.</p>
+      <h3>Opt-Out Tools</h3>
+      <ul>
+        <li>Google Analytics opt-out: <a href="https://tools.google.com/dlpage/gaoptout" target="_blank">tools.google.com/dlpage/gaoptout</a></li>
+        <li>Digital Advertising Alliance opt-out: <a href="https://optout.aboutads.info" target="_blank">optout.aboutads.info</a></li>
+      </ul>
+    </section>
+
+    <section id="s9">
+      <div class="section-header"><div class="section-num">09</div><h2>Changes to This Policy</h2></div>
+      <p>We may update this Cookie Policy from time to time as our services evolve or legal requirements change. We will notify you of significant changes by updating the effective date at the top of this policy. We encourage you to review this page periodically.</p>
+    </section>
+
+    <section id="s10">
+      <div class="section-header"><div class="section-num">10</div><h2>Contact Us</h2></div>
+      <p>If you have questions about our use of cookies or this policy, please contact:</p>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:privacy@travelmitra.io">privacy@travelmitra.io</a></li>
+        <li><strong>Website:</strong> <a href="https://travelmitra.io">travelmitra.io</a></li>
+      </ul>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  <div class="footer-logo">Travel <span>Mitra</span></div>
+  <div class="footer-links">
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="terms-of-service.html">Terms of Service</a>
+    <a href="cookie-policy.html">Cookie Policy</a>
+    <a href="license.html">License</a>
+  </div>
+  <p>&copy; 2026 Travel Mitra Technologies Pvt. Ltd. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

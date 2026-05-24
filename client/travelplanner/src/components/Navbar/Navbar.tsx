@@ -87,7 +87,6 @@ export default function Navbar({ onNavigate }: Props) {
               { href: '#features', label: 'Features' },
               { href: '#destinations', label: 'Destinations' },
               { href: '#ai-chat', label: 'AI Chat' },
-              { href: '#testimonials', label: 'Reviews' },
               { href: '#newsletter', label: 'Newsletter' },
             ].map(({ href, label }) => (
               <a key={href} href={href} className="nav-link" onClick={e => handleAnchorClick(e, href)}>
@@ -152,7 +151,6 @@ export default function Navbar({ onNavigate }: Props) {
           { href: '#features', label: 'Features' },
           { href: '#destinations', label: 'Destinations' },
           { href: '#ai-chat', label: 'AI Chat' },
-          { href: '#testimonials', label: 'Reviews' },
           { href: '#newsletter', label: 'Newsletter' },
         ].map(({ href, label }) => (
           <a key={href} href={href} className="drawer-link" onClick={e => handleAnchorClick(e, href)}>

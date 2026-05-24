@@ -1,3 +1,11 @@
+
+const legalLinks = [
+  { label: 'Privacy Policy', href: '/privacy-policy.html' },
+  { label: 'Terms of Service', href: '/terms-of-service.html' },
+  { label: 'Cookie Policy', href: '/cookie-policy.html' },
+  { label: 'License', href: '/license.html' },
+];
+
 export default function Footer() {
   return (
     <footer>
@@ -36,8 +44,10 @@ export default function Footer() {
           <div className="footer-col">
             <h4>Legal</h4>
             <div className="footer-links">
-              {['Privacy Policy', 'Terms of Service', 'Cookie Policy', 'License'].map(item => (
-                <a href="#" className="footer-link" key={item}>{item} <span className="footer-link-arrow">↗</span></a>
+              {legalLinks.map(item => (
+                <a href={item.href} className="footer-link" key={item.label} target="_blank" rel="noopener noreferrer">
+                  {item.label} <span className="footer-link-arrow">↗</span>
+                </a>
               ))}
             </div>
           </div>
