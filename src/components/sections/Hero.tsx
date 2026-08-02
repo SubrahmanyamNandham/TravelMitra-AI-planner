@@ -11,7 +11,7 @@ interface FormData {
   duration: string;
 }
 
-const Hero: React.FC = () => {
+export const Hero: React.FC = () => {
   const [form, setForm] = useState<FormData>({ destination: '', date: '', budget: '', duration: '' });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) =>
@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
   const fadeUp = (delay = 0) => ({
     initial: { opacity: 0, y: 30 },
     animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.8, delay, ease: [0.4, 0, 0.2, 1] },
+    transition: { duration: 0.8, delay, ease: [0.4, 0, 0.2, 1] as const },
   });
 
   return (
