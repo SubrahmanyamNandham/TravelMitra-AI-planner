@@ -5,7 +5,7 @@ import { FaPlaneDeparture } from 'react-icons/fa';
 import { NAV_LINKS } from '../../data/travel-data';
 import styles from './Navbar.module.scss';
 
-const Navbar: React.FC = () => {
+export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen]     = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
